@@ -1,0 +1,138 @@
+/* Importation de la police Bruno Ace SC */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+/* Style global */
+body {
+    font-family: 'Bruno Ace SC', sans-serif;
+    background-color: #0c0c0c; /* Fond sombre futuriste */
+    color: #ffffff; /* Texte blanc pour contraste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f; /* Fond plus sombre pour la barre de titre */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.7); /* Ombre lumineuse cyan */
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00ffff; /* Texte en cyan néon */
+    text-shadow: 0 0 10px #0055ff, 0 0 20px #0055ff; /* Effet néon bleu */
+}
+
+/* Icône d'accueil corrigée */
+.icon-home {
+    position: fixed; /* L'icône reste en place même au défilement */
+    top: 20px; /* Placée correctement en haut à gauche */
+    right: 20px; /* Ajustée pour ne pas chevaucher le contenu */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Ombre lumineuse cyan */
+    transition: all 0.3s ease;
+}
+
+.icon-home a {
+    color: #00ffff; /* Couleur cyan néon */
+    font-size: 2.5em;
+    text-decoration: none;
+}
+
+.icon-home a:hover {
+    color: #0055ff; /* Bleu au survol */
+    text-shadow: 0 0 10px #0055ff; /* Effet néon bleu */
+    transform: scale(1.1); /* Légère agrandissement au survol */
+}
+
+/* Agrandissement des titres <h3> et couleur bleue */
+h3 {
+    font-size: 1.8em; /* Agrandit les <h3> */
+    color: #0055ff; /* Texte en bleu néon */
+    text-shadow: 0 0 10px #0055ff; /* Effet néon pour ressortir */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0055ff; /* Lien néon bleu */
+    font-size: 1.5em; /* Taille plus grande des liens */
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ffff; /* Cyan au survol */
+    text-shadow: 0 0 8px #00ffff; /* Effet néon */
+    transform: scale(1.1); /* Agrandit légèrement le lien au survol */
+}
+
+/* Section des informations personnelles */
+section {
+    margin: 50px auto;
+    width: 80%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 68, 255, 0.7); /* Ombre néon */
+}
+
+section h2 {
+    color: #0055ff; /* Titre bleu néon */
+    text-shadow: 0 0 10px #0055ff; /* Effet néon */
+    border-bottom: 2px solid #00ffff; /* Ligne de séparation */
+    padding-bottom: 10px;
+}
+
+section p, section div {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Image dans l'accueil */
+section img {
+    width: 180px; /* Ajusté pour être 20% plus grand */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff; /* Effet néon autour de l'image */
+}
+
+/* Style des liens dans les sections */
+a {
+    color: #00ffff; /* Lien en cyan */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #0055ff; /* Bleu au survol */
+    text-shadow: 0 0 10px #0055ff;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 10px;
+    color: #808080;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* Effets de transition */
+section, nav, header {
+    transition: all 0.3s ease;
+}
