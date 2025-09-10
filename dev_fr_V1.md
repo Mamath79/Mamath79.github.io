@@ -3,14 +3,18 @@ layout: page
 title: Développeur Concepteur Logiciel
 description: Développeur Python certifié OpenClassrooms, spécialisé Django, bases de données & automatisation. Passionné par la conception logicielle robuste et la qualité de code.
 image: assets/images/design_dev_1.jpg
+banner_no_overlay: false
+banner_fit: contain
 nav-menu: true
+show_tile: true
+tile_order: 1
 ---
 
+<!-- Main -->
 <div id="main" class="alt">
   <section id="one">
     <div class="inner">
       <header class="major">
-        <h1>Développeur Concepteur Logiciel</h1>
       </header>
 
       <p>
@@ -23,14 +27,13 @@ nav-menu: true
       </p>
 
       <ul class="actions">
-        <li><a href="{{ '/assets/cv/CV_Mathieu_Vieillefont_Developpeur_FR.pdf' | relative_url }}" class="button special icon fa-download">CV (FR)</a></li>
-        <li><a href="{{ '/assets/cv/CV_Mathieu_Vieillefont_Developer_EN.pdf' | relative_url }}" class="button icon fa-download">CV (EN)</a></li>
+        <li><a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="button special icon fa-download">CV (FR)</a></li>
         <li><a href="mailto:contact@naxencia.fr" class="button icon fa-envelope">Contact</a></li>
       </ul>
 
       <hr class="major" />
 
-      <h2>Portfolio Développement</h2>
+      <h2>Portfolio Développeur</h2>
       <p class="small">Exemples de projets techniques réalisés dans le cadre de ma formation et de projets personnels.</p>
 
       <section class="tiles">
@@ -40,8 +43,7 @@ nav-menu: true
           <span class="image">
             <img src="{{ (item.image | default: '/assets/images/pic09.jpg') | relative_url }}" alt="{{ item.title }}">
           </span>
-          {% assign href = item.repo | default: item.link | default: '#' %}
-          <a href="{{ href }}"{% if href != '#' %} target="_blank" rel="noopener"{% endif %}>
+          <a href="#dev-{{ item.slug }}" class="link">
             <h3>{{ item.title }}</h3>
             {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
             {% if item.role %}<p>{{ item.role }}</p>{% endif %}
@@ -49,6 +51,25 @@ nav-menu: true
             {% if item.blurb %}<p>{{ item.blurb }}</p>{% endif %}
           </a>
         </article>
+        <div id="dev-{{ item.slug }}" class="modal">
+          <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
+          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic09.jpg') | relative_url }}');">
+            <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
+            <div class="shade"></div>
+            <div class="modal-body">
+              <h3>{{ item.title }}</h3>
+              {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
+              {% if item.role %}<p>{{ item.role }}</p>{% endif %}
+              {% if item.stack %}<p><em>Stack:</em> {{ item.stack | join: ', ' }}</p>{% endif %}
+              {% if item.blurb %}<p>{{ item.blurb }}</p>{% endif %}
+              <div class="actions">
+                {% if item.repo %}<a class="button" href="{{ item.repo }}" target="_blank" rel="noopener">Voir le code</a>{% endif %}
+                {% if item.link %}<a class="button alt" href="{{ item.link }}" target="_blank" rel="noopener">Voir le site</a>{% endif %}
+                <a class="button" href="#close">Fermer</a>
+              </div>
+            </div>
+          </div>
+        </div>
       {% endfor %}
       </section>
 

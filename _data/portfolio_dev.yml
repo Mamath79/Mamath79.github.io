@@ -5,7 +5,7 @@ projects:
     client: "Projet pédagogique OpenClassrooms"
     stack: ["Python", "MySQL", "SQLAlchemy", "Click", "Rich", "pytest"]
     link: ""
-    repo: "https://github.com/Mamath79/EpicEvents_CRM"
+    repo: "https://github.com/Mamath79/OC_P12_D-veloppez-une-architecture-back-end-securisee-avec-Python-et-SQL.git"
     image: "/assets/images/portfolio/crm-cli.jpg"
     category: "cli"
     blurb: "Gestion clients/contrats/événements, tests unitaires et intégration."

@@ -6,6 +6,8 @@ image: assets/images/DSC00243-small-34.jpg
 banner_no_overlay: false
 banner_fit: contain
 nav-menu: true
+show_tile: true
+tile_order: 2
 ---
 
 <!-- Main -->
@@ -45,16 +47,42 @@ nav-menu: true
           <span class="image">
             <img src="{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}" alt="{{ item.title }}" />
           </span>
-          {% if item.link %}
-          <a href="{{ item.link }}" target="_blank" rel="noopener">
-          {% else %}
-          <a href="#">
-          {% endif %}
+          <a href="#audio-{{ item.slug }}" class="link">
             <h3>{{ item.title }}</h3>
             {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
             <p>{{ item.role }}</p>
           </a>
         </article>
+        <div id="audio-{{ item.slug }}" class="modal">
+          <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
+          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}');">
+            <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
+            <div class="shade"></div>
+            <div class="modal-body">
+              <h3>{{ item.title }}</h3>
+              {% if item.client or item.doubleur %}
+              <p>
+                Pour ce projet, j'ai réalisé
+                {% if item.role %}{{ item.role | downcase }}{% else %}mon intervention{% endif %}
+                {% if item.doubleur %}
+                  chez <a href="{{ item.doubleur }}" target="_blank" rel="noopener">
+                    {{ item.doubleur | replace: 'https://','' | replace:'http://','' | replace:'www.','' | split: '/' | first }}
+                  </a>
+                {% endif %}
+                {% if item.client %}
+                  pour <a href="{{ item.client }}" target="_blank" rel="noopener">
+                    {{ item.client | replace: 'https://','' | replace:'http://','' | replace:'www.','' | split: '/' | first }}
+                  </a>
+                {% endif %}.
+              </p>
+              {% endif %}
+              <div class="actions">
+                {% if item.link %}<a class="button" href="{{ item.link }}" target="_blank" rel="noopener">Voir la fiche</a>{% endif %}
+                <a class="button alt" href="#close">Fermer</a>
+              </div>
+            </div>
+          </div>
+        </div>
       {% endfor %}
       </section>
 
@@ -68,16 +96,42 @@ nav-menu: true
           <span class="image">
             <img src="{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}" alt="{{ item.title }}" />
           </span>
-          {% if item.link %}
-          <a href="{{ item.link }}" target="_blank" rel="noopener">
-          {% else %}
-          <a href="#">
-          {% endif %}
+          <a href="#audio-{{ item.slug }}" class="link">
             <h3>{{ item.title }}</h3>
             {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
             <p>{{ item.role }}</p>
           </a>
         </article>
+        <div id="audio-{{ item.slug }}" class="modal">
+          <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
+          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}');">
+            <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
+            <div class="shade"></div>
+            <div class="modal-body">
+              <h3>{{ item.title }}</h3>
+              {% if item.client or item.doubleur %}
+              <p>
+                Pour ce projet, j'ai réalisé
+                {% if item.role %}{{ item.role | downcase }}{% else %}mon intervention{% endif %}
+                {% if item.doubleur %}
+                  chez <a href="{{ item.doubleur }}" target="_blank" rel="noopener">
+                    {{ item.doubleur | replace: 'https://','' | replace:'http://','' | replace:'www.','' | split: '/' | first }}
+                  </a>
+                {% endif %}
+                {% if item.client %}
+                  pour <a href="{{ item.client }}" target="_blank" rel="noopener">
+                    {{ item.client | replace: 'https://','' | replace:'http://','' | replace:'www.','' | split: '/' | first }}
+                  </a>
+                {% endif %}.
+              </p>
+              {% endif %}
+              <div class="actions">
+                {% if item.link %}<a class="button" href="{{ item.link }}" target="_blank" rel="noopener">Voir la fiche</a>{% endif %}
+                <a class="button alt" href="#close">Fermer</a>
+              </div>
+            </div>
+          </div>
+        </div>
       {% endfor %}
       </section>
 
@@ -91,16 +145,42 @@ nav-menu: true
           <span class="image">
             <img src="{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}" alt="{{ item.title }}" />
           </span>
-          {% if item.link %}
-          <a href="{{ item.link }}" target="_blank" rel="noopener">
-          {% else %}
-          <a href="#">
-          {% endif %}
+          <a href="#audio-{{ item.slug }}" class="link">
             <h3>{{ item.title }}</h3>
             {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
             <p>{{ item.role }}</p>
           </a>
         </article>
+        <div id="audio-{{ item.slug }}" class="modal">
+          <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
+          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}');">
+            <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
+            <div class="shade"></div>
+            <div class="modal-body">
+              <h3>{{ item.title }}</h3>
+              {% if item.client or item.doubleur %}
+              <p>
+                Pour ce projet, j'ai réalisé
+                {% if item.role %}{{ item.role | downcase }}{% else %}mon intervention{% endif %}
+                {% if item.doubleur %}
+                  chez <a href="{{ item.doubleur }}" target="_blank" rel="noopener">
+                    {{ item.doubleur | replace: 'https://','' | replace:'http://','' | replace:'www.','' | split: '/' | first }}
+                  </a>
+                {% endif %}
+                {% if item.client %}
+                  pour <a href="{{ item.client }}" target="_blank" rel="noopener">
+                    {{ item.client | replace: 'https://','' | replace:'http://','' | replace:'www.','' | split: '/' | first }}
+                  </a>
+                {% endif %}.
+              </p>
+              {% endif %}
+              <div class="actions">
+                {% if item.link %}<a class="button" href="{{ item.link }}" target="_blank" rel="noopener">Voir la fiche</a>{% endif %}
+                <a class="button alt" href="#close">Fermer</a>
+              </div>
+            </div>
+          </div>
+        </div>
       {% endfor %}
       </section>
 

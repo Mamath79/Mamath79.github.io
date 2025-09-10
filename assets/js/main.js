@@ -172,6 +172,16 @@
 
 							var href = $link.attr('href');
 
+							// If linking to a hash (modal/anchor), skip transition and just update hash.
+							if (href && href.charAt(0) == '#') {
+								// Prevent default navigation and wrapper fade.
+								event.stopPropagation();
+								event.preventDefault();
+								// Directly set location to trigger :target without page transition.
+								location.href = href;
+								return;
+							}
+
 							// Prevent default.
 								event.stopPropagation();
 								event.preventDefault();
