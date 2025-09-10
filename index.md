@@ -1,9 +1,9 @@
 ---
 layout: home
-title: Home
-landing-title: 'Hi, my name is Forty'
-description: null
-image: null
+title: Mathieu Vieillefont
+landing-title: "Développeur Python & Ingénieur du son"
+description: "test description index"
+image: assets/images/banner_2.jpg
 author: null
 show_tile: false
 ---

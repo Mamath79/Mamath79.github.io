@@ -1,0 +1,55 @@
+projects:
+  - title: "EpicEvents CRM (CLI)"
+    slug: epicevents-crm-cli
+    role: "Dév Python (CLI), BDD"
+    client: "Projet pédagogique OpenClassrooms"
+    stack: ["Python", "MySQL", "SQLAlchemy", "Click", "Rich", "pytest"]
+    link: ""
+    repo: "https://github.com/Mamath79/EpicEvents_CRM"
+    image: "/assets/images/portfolio/crm-cli.jpg"
+    category: "cli"
+    blurb: "Gestion clients/contrats/événements, tests unitaires et intégration."
+
+  - title: "SoftDesk Support API"
+    slug: softdesk-support-api
+    role: "Dév backend API"
+    client: "Projet pédagogique OpenClassrooms"
+    stack: ["Python", "Django REST Framework", "JWT", "Docker", "CI/CD"]
+    link: ""
+    repo: "https://github.com/Mamath79/SoftDesk_API"
+    image: "/assets/images/portfolio/django-softdesk.jpg"
+    category: "api"
+    blurb: "API REST projets & tickets, auth JWT, déploiement Docker."
+
+  - title: "LITRevu"
+    slug: litrevu
+    role: "Dév Django (full‑stack)"
+    client: "Projet personnel"
+    stack: ["Python", "Django", "Auth", "pytest"]
+    link: ""
+    repo: "https://github.com/Mamath79/LITRevu"
+    image: "/assets/images/portfolio/litrevu.jpg"
+    category: "web"
+    blurb: "Partage de critiques, relations utilisateurs, couverture tests >80%."
+
+  - title: "Chess Tournament"
+    slug: chess-tournament
+    role: "Dév Python (MVC)"
+    client: "Projet pédagogique OpenClassrooms"
+    stack: ["Python", "TinyDB", "PrettyTable", "MVC"]
+    link: ""
+    repo: "https://github.com/Mamath79/Chess_Tournament"
+    image: "/assets/images/portfolio/chess.jpg"
+    category: "cli"
+    blurb: "Gestion de tournois d’échecs, architecture claire (MVC)."
+
+  - title: "Intermitracker (en cours)"
+    slug: intermitracker
+    role: "Dév Django (SaaS)"
+    client: "Projet personnel"
+    stack: ["Python", "Django", "Google Calendar", "SaaS"]
+    link: "#"
+    repo: ""
+    image: "/assets/images/portfolio/intermitracker.jpg"
+    category: "web"
+    blurb: "Suivi heures/revenus intermittents, dashboard, intégration calendrier."
