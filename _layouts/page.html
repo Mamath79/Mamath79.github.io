@@ -10,8 +10,32 @@
 
 <body>
     <script type="text/javascript">document.body.classList.add("is-loading");</script>
+    {% include header.html %}
 
-    {% include header.html %} {{ content }} {% include footer.html %}
+    {% if page.image %}
+    {% assign banner_classes = 'style2' %}
+    {% if page.banner_no_overlay %}{% assign banner_classes = banner_classes | append: ' no-overlay' %}{% endif %}
+    {% if page.banner_fit == 'contain' %}{% assign banner_classes = banner_classes | append: ' fit-contain' %}{% endif %}
+    <section id="banner" class="{{ banner_classes }}">
+        <div class="inner">
+          <span class="image">
+              <img src="{{ site.baseurl }}/{{ page.image }}" alt="">
+          </span>
+          <header class="major">
+              <h1>{{ page.title }}</h1>
+          </header>
+          {% if page.description %}
+          <div class="content">
+              {{ page.description }}
+          </div>
+          {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+    {{ content }}
+
+    {% include footer.html %}
 
 </body>
 

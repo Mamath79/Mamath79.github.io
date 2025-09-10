@@ -34,67 +34,22 @@ nav-menu: true
       <p class="small">Exemples de projets techniques réalisés dans le cadre de ma formation et de projets personnels.</p>
 
       <section class="tiles">
-
+      {% assign items = site.data.portfolio_dev.projects %}
+      {% for item in items %}
         <article>
           <span class="image">
-            <img src="{{ '/assets/images/portfolio/crm-cli.jpg' | relative_url }}" alt="EpicEvents CRM CLI">
+            <img src="{{ (item.image | default: '/assets/images/pic09.jpg') | relative_url }}" alt="{{ item.title }}">
           </span>
-          <a href="https://github.com/Mamath79/EpicEvents_CRM" target="_blank" rel="noopener">
-            <h3>EpicEvents CRM (CLI)</h3>
-            <p>Application en ligne de commande pour la gestion des clients, contrats et événements.  
-            Stack : Python, MySQL, SQLAlchemy, Click, Rich.  
-            Tests unitaires & intégration.</p>
+          {% assign href = item.repo | default: item.link | default: '#' %}
+          <a href="{{ href }}"{% if href != '#' %} target="_blank" rel="noopener"{% endif %}>
+            <h3>{{ item.title }}</h3>
+            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
+            {% if item.role %}<p>{{ item.role }}</p>{% endif %}
+            {% if item.stack %}<p><em>Stack:</em> {{ item.stack | join: ', ' }}</p>{% endif %}
+            {% if item.blurb %}<p>{{ item.blurb }}</p>{% endif %}
           </a>
         </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/django-softdesk.jpg' | relative_url }}" alt="SoftDesk Support API">
-          </span>
-          <a href="https://github.com/Mamath79/SoftDesk_API" target="_blank" rel="noopener">
-            <h3>SoftDesk Support API</h3>
-            <p>API REST de gestion des projets et tickets de support.  
-            Stack : Django REST Framework, JWT Auth, permissions.  
-            Déploiement Docker + CI/CD.</p>
-          </a>
-        </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/litrevu.jpg' | relative_url }}" alt="LITRevu">
-          </span>
-          <a href="https://github.com/Mamath79/LITRevu" target="_blank" rel="noopener">
-            <h3>LITRevu</h3>
-            <p>Plateforme Django pour partager critiques de livres et suivre d’autres utilisateurs.  
-            Gestion des relations et système d’avis.  
-            Tests pytest >80%.</p>
-          </a>
-        </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/chess.jpg' | relative_url }}" alt="Chess Tournament MVC">
-          </span>
-          <a href="https://github.com/Mamath79/Chess_Tournament" target="_blank" rel="noopener">
-            <h3>Chess Tournament</h3>
-            <p>Application MVC en Python pour gérer des tournois d’échecs.  
-            Stack : TinyDB, PrettyTable, architecture propre.  
-            Exemple concret d’organisation MVC.</p>
-          </a>
-        </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/intermitracker.jpg' | relative_url }}" alt="Intermitracker">
-          </span>
-          <a href="#" target="_blank" rel="noopener">
-            <h3>Intermitracker (en cours)</h3>
-            <p>Web app Django pour suivre les heures et revenus d’intermittents du spectacle.  
-            Intégration Google Calendar, dashboard personnalisé.  
-            Prévu en SaaS (freemium).</p>
-          </a>
-        </article>
-
+      {% endfor %}
       </section>
 
       <hr class="major" />

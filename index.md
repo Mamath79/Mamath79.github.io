@@ -2,7 +2,7 @@
 layout: home
 title: Mathieu Vieillefont
 landing-title: "Développeur Python & Ingénieur du son"
-description: null
+description: "test description index"
 image: assets/images/banner_2.jpg
 author: null
 show_tile: false

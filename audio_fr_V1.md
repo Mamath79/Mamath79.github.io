@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Ingénieur du son
-description: Montage & mixage VF, doublage, post-production audiovisuelle. 20 ans d’expérience, workflow remote, livrables broadcast & streaming.
+description: Enregistrement, Montage & Mixage. Doublage, Post-production audiovisuelle. 20 ans d’expérience.
 image: assets/images/DSC00243-small-34.jpg
+banner_no_overlay: false
+banner_fit: contain
 nav-menu: true
 ---
 
@@ -11,13 +13,18 @@ nav-menu: true
   <section id="one">
     <div class="inner">
       <header class="major">
-        <h1>Ingénieur du son — Doublage & Post-production</h1>
       </header>
 
       <p>
-        Ingé son freelance spécialisé en <strong>montage et mixage VF</strong> (doublage), je collabore avec des studios et plateformes
+        Ingé son freelance spécialisé en <strong>montage et mixage VF</strong> (doublage), je collabore avec des studios comme
+        <a href="https://www.dubbing-brothers.com/#/home" target="_blank" rel="noopener">Dubbing Brothers</a>,
+        <a href="https://www.iyuno.com" target="_blank" rel="noopener">Iyuno</a> ou
+        <a href="https://www.titrafilm.com" target="_blank" rel="noopener">TitraFilm</a>, et avec des plateformes telles que
+        <a href="https://www.netflix.com" target="_blank" rel="noopener">Netflix</a>,
+        <a href="https://www.primevideo.com" target="_blank" rel="noopener">Prime Video</a> et
+        <a href="https://www.disneyplus.com" target="_blank" rel="noopener">Disney+</a>,
         pour livrer des <strong>masters conformes broadcast/streaming</strong>. Chaîne complète : préparation sessions, nettoyage dialogue,
-        design/rx, prémix, mix final, <em>printmaster</em> & livrables. <strong>Workflow remote</strong> disponible (échanges sécurisés, QC).
+        design/RX, prémix, mix final, <em>printmaster</em> & livrables. <strong>Workflow remote</strong> disponible (échanges sécurisés, QC).
       </p>
 
       <ul class="actions">
@@ -28,71 +35,73 @@ nav-menu: true
       <hr class="major" />
 
       <h2>Portfolio (sélection)</h2>
-      <p class="small">Clique sur une vignette pour voir un extrait, une bande-démo ou une page projet.</p>
+      <p class="small">Clique sur une vignette pour afficher les détails.</p>
 
-      <!-- TILES -->
+      <!-- TILES: Cinéma — Enregistrement -->
+      <h2>Cinéma — Enregistrement</h2>
       <section class="tiles">
-
+      {% for item in site.data.portfolio_audio.cinema_rec %}
         <article>
           <span class="image">
-            <img src="{{ '/assets/images/portfolio/lincoln-lawyer.jpg' | relative_url }}" alt="The Lincoln Lawyer — VF" />
+            <img src="{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}" alt="{{ item.title }}" />
           </span>
-          <a href="https://example.com/reel/lincoln-lawyer" target="_blank" rel="noopener">
-            <h3>The Lincoln Lawyer — VF</h3>
-            <p>Montage & mixage VF (S2-S3) — diffusion Netflix. Dialogue, ambiances, conformité loudness.</p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener">
+          {% else %}
+          <a href="#">
+          {% endif %}
+            <h3>{{ item.title }}</h3>
+            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
+            <p>{{ item.role }}</p>
           </a>
         </article>
+      {% endfor %}
+      </section>
 
+      <hr class="major" />
+
+      <!-- TILES: Cinéma — Mixage -->
+      <h2>Cinéma — Mixage</h2>
+      <section class="tiles">
+      {% for item in site.data.portfolio_audio.cinema_mix %}
         <article>
           <span class="image">
-            <img src="{{ '/assets/images/portfolio/series-doublage.jpg' | relative_url }}" alt="Séries premium — VF" />
+            <img src="{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}" alt="{{ item.title }}" />
           </span>
-          <a href="https://example.com/reel/series-premium" target="_blank" rel="noopener">
-            <h3>Séries premium — VF</h3>
-            <p>Doublage multi-épisodes : édition/clean, premix stems, livrables M&E/5.1.</p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener">
+          {% else %}
+          <a href="#">
+          {% endif %}
+            <h3>{{ item.title }}</h3>
+            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
+            <p>{{ item.role }}</p>
           </a>
         </article>
+      {% endfor %}
+      </section>
 
+      <hr class="major" />
+
+      <!-- TILES: Séries Tv / Tv films -->
+      <h2>Séries Tv / Tv films</h2>
+      <section class="tiles">
+      {% for item in site.data.portfolio_audio.series %}
         <article>
           <span class="image">
-            <img src="{{ '/assets/images/portfolio/feature-film.jpg' | relative_url }}" alt="Longs métrages — ADR & Mix" />
+            <img src="{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}" alt="{{ item.title }}" />
           </span>
-          <a href="https://example.com/reel/feature-adr-mix" target="_blank" rel="noopener">
-            <h3>Longs métrages</h3>
-            <p>ADR, restauration dialogue, mix final specs plate-forme (IT/LRA/TP). </p>
+          {% if item.link %}
+          <a href="{{ item.link }}" target="_blank" rel="noopener">
+          {% else %}
+          <a href="#">
+          {% endif %}
+            <h3>{{ item.title }}</h3>
+            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
+            <p>{{ item.role }}</p>
           </a>
         </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/documentary.jpg' | relative_url }}" alt="Documentaires — voix & narration" />
-          </span>
-          <a href="https://example.com/reel/documentary-vo" target="_blank" rel="noopener">
-            <h3>Documentaires</h3>
-            <p>Montage voix/narration, nettoyage/bruit de fond, équilibrage musique-VO.</p>
-          </a>
-        </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/animation.jpg' | relative_url }}" alt="Animation — doublage & FX" />
-          </span>
-          <a href="https://example.com/reel/animation-dub" target="_blank" rel="noopener">
-            <h3>Animation</h3>
-            <p>Doublage, sync labiale, FX ponctuels, conformités multi-territoires.</p>
-          </a>
-        </article>
-
-        <article>
-          <span class="image">
-            <img src="{{ '/assets/images/portfolio/showreel.jpg' | relative_url }}" alt="Showreel audio — extraits" />
-          </span>
-          <a href="https://example.com/reel/showreel" target="_blank" rel="noopener">
-            <h3>Showreel</h3>
-            <p>Extraits courts (dialogue, ambiances, mix final) — écoute A/B.</p>
-          </a>
-        </article>
-
+      {% endfor %}
       </section>
 
       <hr class="major" />

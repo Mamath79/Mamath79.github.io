@@ -111,6 +111,29 @@
 		&.style5 { &:after { background-color: _palette(accent5); } }
 		&.style6 { &:after { background-color: _palette(accent6); } }
 
+		/* Custom modifiers: no overlay + fit image fully */
+		&.no-overlay {
+			background-image: none !important;
+			&:after { display: none; }
+		}
+
+		&.fit-contain {
+			> .inner {
+				.image {
+					display: block;
+					text-align: center;
+					img {
+						max-height: 60vh;
+						max-width: 100%;
+						width: auto;
+						height: auto;
+						object-fit: contain;
+						margin: 0 auto 1.5rem auto;
+					}
+				}
+			}
+		}
+
 		body.is-loading & {
 			&:after {
 				opacity: 1.0;
