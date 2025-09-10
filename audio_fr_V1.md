@@ -22,7 +22,6 @@ nav-menu: true
 
       <ul class="actions">
         <li><a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="button special icon fa-download">CV (FR)</a></li>
-        <li><a href="{{ '/assets/cv/CV-2025_English_compressed.pdf' | relative_url }}" class="button icon fa-download">CV (EN)</a></li>
         <li><a href="mailto:contact@naxencia.fr" class="button icon fa-envelope">Contact</a></li>
       </ul>
 
