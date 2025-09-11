@@ -10,8 +10,8 @@ description: |
   recherche une opportunité pour mettre à profit mes compétences hybrides au sein d'une équipe dynamique et
   relever des défis techniques stimulants.
   Prêt à contribuer concrètement à vos projets, je suis disponible pour un test sur mission.
-baseurl: "https://mamath79.github.io" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+baseurl:  # the subpath of your site, e.g. /blog
+url: "https://mamath79.github.io" # the base hostname & protocol for your site
 author: "Mathieu Vieillefont"
 street_address: 
 city: Saint Cloud
