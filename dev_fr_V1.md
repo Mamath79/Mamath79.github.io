@@ -43,13 +43,13 @@ tile_order: 1
           <span class="image">
             <img src="{{ (item.image | default: '/assets/images/pic09.jpg') | relative_url }}" alt="{{ item.title }}">
           </span>
-          <a href="#dev-{{ item.slug }}" class="link">
-            <h3>{{ item.title }}</h3>
+          <header class="major">
+            <h3><a href="#dev-{{ item.slug }}" class="link">{{ item.title }}</a></h3>
             {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
             {% if item.role %}<p>{{ item.role }}</p>{% endif %}
             {% if item.stack %}<p><em>Stack:</em> {{ item.stack | join: ', ' }}</p>{% endif %}
             {% if item.blurb %}<p>{{ item.blurb }}</p>{% endif %}
-          </a>
+          </header>
         </article>
         <div id="dev-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
