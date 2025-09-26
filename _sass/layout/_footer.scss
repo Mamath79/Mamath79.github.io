@@ -7,6 +7,19 @@
 /* Footer */
 
 	#footer {
+		/* Make footer icons white without circle */
+		.icons {
+			 a.icon.alt {
+				 &:before {
+					 background: none;
+					 color: #fff;
+					 border-radius: 0;
+					 height: auto;
+					 width: auto;
+					 line-height: inherit;
+				 }
+			 }
+		}
 		.copyright {
 			font-size: 0.8em;
 			list-style: none;

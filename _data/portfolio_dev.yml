@@ -5,10 +5,21 @@ projects:
     client: "Projet pédagogique OpenClassrooms"
     stack: ["Python", "MySQL", "SQLAlchemy", "Click", "Rich", "pytest"]
     link: ""
-    repo: "https://github.com/Mamath79/OC_P12_D-veloppez-une-architecture-back-end-securisee-avec-Python-et-SQL.git"
+    repo: "https://github.com/Mamath79/epic-events-secure-backend.git"
     image: "/assets/images/portfolio/crm-cli.jpg"
     category: "cli"
     blurb: "Gestion clients/contrats/événements, tests unitaires et intégration."
+
+  - title: "Orange County Lettings"
+    slug: "Orange County Lettings"
+    role: "Dev django"
+    client: "Projet pédagogique OpenClassrooms"
+    stack: ["Python", "Django", "Docker", "Github_actions"]
+    link: "#"
+    repo: "https://github.com/Mamath79/oc-lettings-modular-django.git"
+    image: "assets/images/portfolio/P13_orange_counting_Lettings.jpg"
+    category: "web"
+    blurb: ""
 
   - title: "SoftDesk Support API"
     slug: softdesk-support-api
@@ -16,8 +27,8 @@ projects:
     client: "Projet pédagogique OpenClassrooms"
     stack: ["Python", "Django REST Framework", "JWT", "Docker", "CI/CD"]
     link: ""
-    repo: "https://github.com/Mamath79/SoftDesk_API"
-    image: "/assets/images/portfolio/django-softdesk.jpg"
+    repo: "https://github.com/Mamath79/oc-softdesk-support-api.git"
+    image: "assets/images/portfolio/soft_desk.jpg"
     category: "api"
     blurb: "API REST projets & tickets, auth JWT, déploiement Docker."
 
@@ -27,7 +38,7 @@ projects:
     client: "Projet personnel"
     stack: ["Python", "Django", "Auth", "pytest"]
     link: ""
-    repo: "https://github.com/Mamath79/LITRevu"
+    repo: "https://github.com/Mamath79/OC_P9_D-veloppez-une-application-Web-en-utilisant-Django.git"
     image: "/assets/images/portfolio/litrevu.jpg"
     category: "web"
     blurb: "Partage de critiques, relations utilisateurs, couverture tests >80%."
@@ -48,8 +59,19 @@ projects:
     role: "Dév Django (SaaS)"
     client: "Projet personnel"
     stack: ["Python", "Django", "Google Calendar", "SaaS"]
-    link: "#"
+    link: ""
     repo: ""
     image: "/assets/images/portfolio/intermitracker.jpg"
     category: "web"
     blurb: "Suivi heures/revenus intermittents, dashboard, intégration calendrier."
+
+#  - title: 
+#    slug: 
+#    role: ""
+#    client: ""
+#    stack: 
+#    link: "#"
+#    repo: ""
+#    image: ""
+#    category: ""
+#    blurb: ""

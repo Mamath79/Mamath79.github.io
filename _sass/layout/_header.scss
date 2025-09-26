@@ -62,6 +62,32 @@
 			}
 		}
 
+		/* Header contact icons next to logo */
+		.header-icons {
+			@include vendor('display', 'flex');
+			@include vendor('align-items', 'center');
+			margin: 0; /* override default ul margin */
+			padding: 0 0 0 1.25em; /* small space from left edge / after logo */
+
+			li { padding: 0 0.75em 0 0; }
+
+			a.icon.alt {
+				&:before {
+					background: none;
+					color: #fff;
+					border-radius: 0;
+					height: auto;
+					width: auto;
+					line-height: inherit;
+				}
+			}
+		}
+
+		/* Slightly more offset on home (alt header) */
+		&.alt {
+			.header-icons { padding-left: 3em; }
+		}
+
 		nav {
 			@include vendor('display', 'flex');
 			@include vendor('justify-content', 'flex-end');
@@ -131,7 +157,7 @@
 
 		&.alt {
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
-			@include vendor('transition-delay', '0.75s');
+			@include vendor('transition-delay', '0.375s');
 			@include vendor('animation', 'none');
 			background-color: transparent;
 			box-shadow: none;

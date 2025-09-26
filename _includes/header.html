@@ -3,28 +3,59 @@
 
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
-	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
-	<nav>
-		<a href="#menu">Menu</a>
-	</nav>
+    {% if page.layout != "home" %}
+    <a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
+    {% endif %}
+
+    <!-- Header contact icons -->
+    <ul class="icons header-icons">
+        <li>
+            <a href="mailto:{{ site.email }}" class="icon alt fa-envelope" aria-label="Email">
+                <span class="label">Email</span>
+            </a>
+        </li>
+        <li>
+            {% assign phone_href = site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' %}
+            <a href="tel:{{ phone_href }}" class="icon alt fa-phone" aria-label="Téléphone">
+                <span class="label">Phone</span>
+            </a>
+        </li>
+        {% if site.socials.LinkedIn %}
+        <li>
+            <a href="{{ site.socials.LinkedIn }}" class="icon alt fa-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <span class="label">LinkedIn</span>
+            </a>
+        </li>
+        {% endif %}
+        {% if site.socials.GitHub %}
+        <li>
+            <a href="{{ site.socials.GitHub }}" class="icon alt fa-github" target="_blank" rel="noopener" aria-label="GitHub">
+                <span class="label">GitHub</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+
+    <nav>
+        <a href="#menu">Menu</a>
+    </nav>
 </header>
 
 <!-- Menu -->
 <nav id="menu">
 	<ul class="links">
-        {% for page in site.pages %}
-		    {% if page.layout == "home" %}
-		        <li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li>
-	    	{% endif %}
-		{% endfor %}
-		{% for page in site.html_pages %}
-		    {% if page.layout != "home" and page.nav-menu == true %}
-		        <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
-		    {% endif %}
-		{% endfor %}
-	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
+		{%- assign current_url = page.url | absolute_url -%}
+		{%- for p in site.html_pages -%}
+		  {%- assign p_url = p.url | absolute_url -%}
+		  {%- if p.layout == "home" -%}
+		    {%- if page.layout != "home" -%}
+      <li><a href="{{ "" | absolute_url }}/">Acceuil</a></li>
+		    {%- endif -%}
+		  {%- else -%}
+		    {%- if p.nav-menu == true and p_url != current_url -%}
+		      <li><a href="{{ p_url }}">{{ p.title }}</a></li>
+		    {%- endif -%}
+		  {%- endif -%}
+		{%- endfor -%}
 	</ul>
 </nav>
