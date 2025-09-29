@@ -15,7 +15,7 @@ projects:
     role: "Dev django"
     client: "Projet pédagogique OpenClassrooms"
     stack: ["Python", "Django", "Docker", "Github_actions"]
-    link: "#"
+    link: "https://python-oc-lettings-8d61.onrender.com/"
     repo: "https://github.com/Mamath79/oc-lettings-modular-django.git"
     image: "assets/images/portfolio/P13_orange_counting_Lettings.jpg"
     category: "web"

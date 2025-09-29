@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Mathieu Vieillefont
-landing-title: "Développeur Concepteur Logiciel & Ingénieur du son"
+landing-title: "Développeur Concepteur Logiciel."
 description: "test description index"
 image: assets/images/banner laptop mirror 5.jpg
 author: null

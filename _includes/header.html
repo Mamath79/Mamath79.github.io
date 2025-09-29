@@ -45,16 +45,34 @@
 <nav id="menu">
 	<ul class="links">
 		{%- assign current_url = page.url | absolute_url -%}
+
+		{%- comment -%}
+		  Ordered primary pages: Dev portfolio, About, Audio history
+		{%- endcomment -%}
+		{%- assign ordered_paths = 'dev_fr_V1.md|about.md|audio_fr_V1.md' | split: '|' -%}
+		{%- for op in ordered_paths -%}
+		  {%- assign hit = site.html_pages | where: 'path', op | first -%}
+		  {%- if hit and hit.nav-menu == true -%}
+		    {%- assign hit_url = hit.url | absolute_url -%}
+		    {%- if hit_url != current_url -%}
+		      <li><a href="{{ hit_url }}">{{ hit.title }}</a></li>
+		    {%- endif -%}
+		  {%- endif -%}
+		{%- endfor -%}
+
+		{%- comment -%}
+		  Add remaining nav-menu pages except Home and All posts, excluding already listed
+		{%- endcomment -%}
 		{%- for p in site.html_pages -%}
 		  {%- assign p_url = p.url | absolute_url -%}
-		  {%- if p.layout == "home" -%}
-		    {%- if page.layout != "home" -%}
+		  {%- if p.layout == 'home' -%}
+		    {%- if page.layout != 'home' -%}
       <li><a href="{{ "" | absolute_url }}/">Acceuil</a></li>
 		    {%- endif -%}
-		  {%- else -%}
-		    {%- if p.nav-menu == true and p_url != current_url -%}
+		  {%- elsif p.nav-menu == true and p_url != current_url and p.layout != 'allposts' and p.title != 'All posts' -%}
+		    {%- unless ordered_paths contains p.path -%}
 		      <li><a href="{{ p_url }}">{{ p.title }}</a></li>
-		    {%- endif -%}
+		    {%- endunless -%}
 		  {%- endif -%}
 		{%- endfor -%}
 	</ul>
