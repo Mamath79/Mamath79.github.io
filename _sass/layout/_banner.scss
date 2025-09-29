@@ -91,6 +91,14 @@
 					letter-spacing: _font(letter-spacing-alt);
 					text-transform: uppercase;
 				}
+
+				/* Override for home description: keep case, normal spacing */
+                .banner-description {
+                    font-size: 1.2em;
+                    font-weight: _font(weight);
+                    letter-spacing: normal;
+                    text-transform: none;
+                }
 			}
 		}
 
@@ -108,6 +116,16 @@
 		&.dezoom {
 			height: 60vh; /* a bit shorter than default major */
 			max-height: 40em;
+			h1 { font-size: 3em; }
+		}
+
+		/* Fullscreen modifier for home */
+		&.full {
+			height: 100vh;
+			max-height: none;
+			min-height: 30em;
+			background-position: center;
+			background-size: cover;
 		}
 
 		&.style1 { &:after { background-color: _palette(accent1); } }

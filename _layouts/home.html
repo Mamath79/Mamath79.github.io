@@ -13,15 +13,15 @@
     {% include header.html %}
 
     <!-- Banner -->
-    <section id="banner" class="major dezoom"{% if page.image %} style="background-image: url('{{ site.baseurl }}/{{ page.image }}');"{% endif %}>
+    <section id="banner" class="major full"{% if page.image %} style="background-image: url('{{ site.baseurl }}/{{ page.image }}');"{% endif %}>
         <div class="inner">
             <header class="major">
                 <h1>{{ page.landing-title }}</h1>
             </header>
             <div class="content">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
+                <div class="banner-description">{{ content | markdownify }}</div>
                 <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                    <li><a href="#one" class="button next scrolly">Mes projets</a></li>
                 </ul>
             </div>
         </div>
@@ -30,8 +30,7 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- One -->
-        <!-- Two -->
+        <!-- One (tiles) -->
             {% include tiles.html %}
 
     </div>
