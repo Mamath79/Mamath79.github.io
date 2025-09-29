@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ingénieur du son
+title: Historique Ingénieur du son.
 description: Enregistrement, Montage & Mixage. Doublage, Post-production audiovisuelle. 20 ans d’expérience.
 image: assets/images/DSC00243-small-34.jpg
 banner_no_overlay: false

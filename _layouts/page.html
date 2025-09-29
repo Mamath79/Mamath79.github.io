@@ -16,6 +16,7 @@
     {% assign banner_classes = 'style2' %}
     {% if page.banner_no_overlay %}{% assign banner_classes = banner_classes | append: ' no-overlay' %}{% endif %}
     {% if page.banner_fit == 'contain' %}{% assign banner_classes = banner_classes | append: ' fit-contain' %}{% endif %}
+    {% if page.banner_compact %}{% assign banner_classes = banner_classes | append: ' compact' %}{% endif %}
     <section id="banner" class="{{ banner_classes }}">
         <div class="inner">
           <span class="image">

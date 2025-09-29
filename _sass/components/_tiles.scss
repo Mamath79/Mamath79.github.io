@@ -45,6 +45,17 @@
 				z-index: 3;
 			}
 
+			/* Improve tile description readability (keep case, slightly larger) */
+			header.major {
+				p {
+					text-transform: none;
+					letter-spacing: normal;
+					font-weight: _font(weight);
+					font-size: 0.9em;
+					margin-top: 0.25em;
+				}
+			}
+
 			h3 {
 				font-size: 1.75em;
 

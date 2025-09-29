@@ -33,7 +33,7 @@
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.85;
+			opacity: 0.95;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -91,6 +91,14 @@
 					letter-spacing: _font(letter-spacing-alt);
 					text-transform: uppercase;
 				}
+
+				/* Override for home description: keep case, normal spacing */
+                .banner-description {
+                    font-size: calc((1.2em + 4px) * 1.1);
+                    font-weight: _font(weight);
+                    letter-spacing: normal;
+                    text-transform: none;
+                }
 			}
 		}
 
@@ -108,6 +116,35 @@
 		&.dezoom {
 			height: 60vh; /* a bit shorter than default major */
 			max-height: 40em;
+			h1 { font-size: 3em; }
+		}
+
+		/* Fullscreen modifier for home */
+		&.full {
+			height: 100vh;
+			max-height: none;
+			min-height: 30em;
+			background-position: center;
+			background-size: cover;
+			/* Home banner overlay opacity */
+			&:after { opacity: 0.7; }
+
+			> .inner {
+				.content {
+					/* Stack description then button; keep button on right */
+					@include vendor('display', 'flex');
+					@include vendor('flex-direction', 'column');
+					@include vendor('align-items', 'stretch');
+					> * { margin-left: 0; }
+					.actions { align-self: flex-end; margin-top: 1.25em; }
+					/* Ensure professional case inside banner content */
+					p {
+						text-transform: none;
+						letter-spacing: normal;
+						font-weight: _font(weight);
+					}
+				}
+			}
 		}
 
 		&.style1 { &:after { background-color: _palette(accent1); } }
@@ -135,6 +172,21 @@
 						height: auto;
 						object-fit: contain;
 						margin: 0 auto 1.5rem auto;
+					}
+				}
+			}
+		}
+
+		/* Compact modifier: fit content for content pages */
+		&.compact {
+			height: auto; /* let content define height */
+			max-height: none;
+			min-height: 22em; /* keep a comfortable minimum */
+			/* When using fit-contain, keep image modest so text leads */
+			&.fit-contain {
+				> .inner {
+					.image {
+						img { max-height: 40vh; }
 					}
 				}
 			}
