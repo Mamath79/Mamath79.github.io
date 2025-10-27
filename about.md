@@ -21,6 +21,14 @@ tile_order: 3
         création et technique selon les projets.
       </p>
 
+      <h2>Ce que je propose</h2>
+      <ul>
+        <li>Automatisations Python pour studios, PME et équipes hybrides.</li>
+        <li>APIs et back-ends Django/DRF, sécurisés et couverts par des tests.</li>
+        <li>Pipelines CI/CD (GitHub Actions, Docker) prêts à déployer.</li>
+        <li>Dashboards de suivi (Streamlit, data viz) pour piloter l’activité.</li>
+      </ul>
+
       <hr class="major" />
 
       <h2>Musique</h2>

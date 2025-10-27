@@ -43,6 +43,7 @@
 			header {
 				position: relative;
 				z-index: 3;
+				@include vendor('transition', 'opacity 0.3s ease');
 			}
 
 			/* Improve tile description readability (keep case, slightly larger) */
@@ -106,6 +107,10 @@
 			&:hover {
 				&:before {
 					opacity: 0;
+				}
+
+				header {
+					opacity: 0.15;
 				}
 			}
 

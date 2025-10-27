@@ -11,6 +11,29 @@
 		margin-bottom: _size(element-margin);
 		padding: 1.5em;
 
+		&.audio-summary {
+			background-color: rgba(255, 255, 255, 0.05);
+			border-color: transparentize(_palette(border), 0.25);
+			box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.25);
+			font-size: 1em;
+			line-height: 1.6;
+			p {
+				margin-bottom: 0.5em;
+			}
+		}
+
+		&.service-card {
+			background: rgba(36, 41, 67, 0.85);
+			border-color: transparentize(_palette(border), 0.1);
+			box-shadow: 0 0.65rem 1.5rem rgba(0, 0, 0, 0.3);
+			h3 {
+				margin-bottom: 0.35em;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+
 		> :last-child,
 		> :last-child > :last-child,
 		> :last-child > :last-child > :last-child {

@@ -1,6 +1,6 @@
 # site settings
-title: Acceuil
-subtitle: 
+title: Mathieu Vieillefont
+subtitle: Développeur Python
 email: mathieu.vieillefont@naxencia.com
 description: |
   Développeur Python, je capitalise sur 20 ans d'expérience en ingénierie du son (cinéma, télévision, médias)
@@ -19,6 +19,8 @@ state:
 zip_code: 92210
 country: France
 phone: (+33) 611223344
+og_image: /assets/images/banner laptop mirror 1.jpg
+twitter_username:
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"

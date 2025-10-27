@@ -7,11 +7,13 @@
   {% for tile in tiles limit:site.tiles-count %}
   <article>
     <span class="image">
-      <img src="{{ tile.image | relative_url }}" alt="{{ tile.title }}" />
+      <img src="{{ tile.image | relative_url }}" alt="{{ tile.title }}" loading="lazy" decoding="async" />
     </span>
     <header class="major">
-      <h3><a href="{{ tile.url  | relative_url }}" class="link">{{ tile.title }}</a></h3>
+      <h3>{{ tile.title }}</h3>
+      {% if tile.tile_excerpt %}<p>{{ tile.tile_excerpt }}</p>{% endif %}
     </header>
+    <a href="{{ tile.url  | relative_url }}" class="link primary" aria-label="Accéder à {{ tile.title }}"></a>
   </article>
   {% endfor %}
 </section>

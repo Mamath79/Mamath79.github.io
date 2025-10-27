@@ -62,6 +62,14 @@
 			header {
 				width: auto;
 
+				.banner-subtitle {
+					font-size: 1.1em;
+					font-weight: _font(weight-bold);
+					letter-spacing: normal;
+					margin: 0.35em 0 0 0;
+					max-width: 32ch;
+				}
+
 				> :first-child {
 					width: auto;
 
@@ -93,12 +101,27 @@
 				}
 
 				/* Override for home description: keep case, normal spacing */
-                .banner-description {
-                    font-size: calc((1.2em + 4px) * 1.1);
-                    font-weight: _font(weight);
-                    letter-spacing: normal;
-                    text-transform: none;
-                }
+               .banner-description {
+                   font-size: calc((1.2em + 4px) * 1.1);
+                   font-weight: _font(weight);
+                   letter-spacing: normal;
+                   text-transform: none;
+               }
+
+				.primary-actions,
+				.secondary-actions {
+					margin-top: 1.25em;
+				}
+
+				.primary-actions {
+					@include vendor('display', 'flex');
+					@include vendor('flex-wrap', 'wrap');
+					gap: 1em;
+				}
+
+				.secondary-actions {
+					margin-top: 0.75em;
+				}
 			}
 		}
 
@@ -108,7 +131,7 @@
 			max-height: 50em;
 
 			&.alt {
-				  opacity: 0.75;
+				  opacity: 0.10;
 			}
 		}
 
@@ -121,20 +144,21 @@
 
 		/* Fullscreen modifier for home */
 		&.full {
-			height: 100vh;
+			height: 95vh;
 			max-height: none;
 			min-height: 30em;
 			background-position: center;
 			background-size: cover;
 			/* Home banner overlay opacity */
-			&:after { opacity: 0.7; }
+			&:after { opacity: 0.70; }
 
 			> .inner {
 				.content {
 					/* Stack description then button; keep button on right */
 					@include vendor('display', 'flex');
-					@include vendor('flex-direction', 'column');
-					@include vendor('align-items', 'stretch');
+						@include vendor('flex-direction', 'column');
+						@include vendor('align-items', 'stretch');
+						width: 100%;
 					> * { margin-left: 0; }
 					.actions { align-self: flex-end; margin-top: 1.25em; }
 					/* Ensure professional case inside banner content */

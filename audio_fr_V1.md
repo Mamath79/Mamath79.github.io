@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Historique Ingénieur du son.
+title: Portfolio Ingénieur du son.
 description: Enregistrement, Montage & Mixage. Doublage, Post-production audiovisuelle. 20 ans d’expérience.
 image: assets/images/DSC00243-small-34.jpg
 banner_no_overlay: false
@@ -17,6 +17,19 @@ tile_order: 2
       <header class="major">
       </header>
 
+      <div class="box audio-summary">
+        <p><strong>+20&nbsp;ans</strong> d’ingénierie du son | Doublage, montage & mixage VF | Workflow remote sécurisé.</p>
+        <p><strong>Studios&nbsp;:</strong> Dubbing Brothers, Iyuno, TitraFilm | <strong>Plateformes&nbsp;:</strong> Netflix, Disney+, Apple TV+, Prime Video.</p>
+      </div>
+
+      <nav class="audio-toc">
+        <ul>
+          <li><a href="#audio-cinema-rec">Cinéma — Enregistrement</a></li>
+          <li><a href="#audio-cinema-mix">Cinéma — Mixage</a></li>
+          <li><a href="#audio-series">Séries TV / TV films</a></li>
+        </ul>
+      </nav>
+
       <p>
         Ingé son freelance spécialisé en <strong>montage et mixage VF</strong> (doublage), je collabore avec des studios comme
         <a href="https://www.dubbing-brothers.com/#/home" target="_blank" rel="noopener">Dubbing Brothers</a>,
@@ -31,7 +44,7 @@ tile_order: 2
 
       <ul class="actions">
         <li><a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="button special icon fa-download">CV (FR)</a></li>
-        <li><a href="mailto:contact@naxencia.fr" class="button icon fa-envelope">Contact</a></li>
+        <li><a href="mailto:{{ site.email }}" class="button icon fa-paper-plane">Discuter d'un projet</a></li>
       </ul>
 
       <hr class="major" />
@@ -40,18 +53,19 @@ tile_order: 2
       <p class="small">Clique sur une vignette pour afficher les détails.</p>
 
       <!-- TILES: Cinéma — Enregistrement -->
-      <h2>Cinéma — Enregistrement</h2>
+      <h2 id="audio-cinema-rec">Cinéma — Enregistrement</h2>
       <section class="tiles">
       {% for item in site.data.portfolio_audio.cinema_rec %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}" alt="{{ item.title }}" />
+            <img src="{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
           </span>
-          <a href="#audio-{{ item.slug }}" class="link">
+          <header class="major">
             <h3>{{ item.title }}</h3>
-            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
-            <p>{{ item.role }}</p>
-          </a>
+            {% if item.client %}<p><strong>Client&nbsp;:</strong> {{ item.client }}</p>{% endif %}
+            {% if item.role %}<p>{{ item.role }}</p>{% endif %}
+          </header>
+          <a href="#audio-{{ item.slug }}" class="link primary" aria-label="Voir {{ item.title }}"></a>
         </article>
         <div id="audio-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
@@ -89,18 +103,19 @@ tile_order: 2
       <hr class="major" />
 
       <!-- TILES: Cinéma — Mixage -->
-      <h2>Cinéma — Mixage</h2>
+      <h2 id="audio-cinema-mix">Cinéma — Mixage</h2>
       <section class="tiles">
       {% for item in site.data.portfolio_audio.cinema_mix %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}" alt="{{ item.title }}" />
+            <img src="{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
           </span>
-          <a href="#audio-{{ item.slug }}" class="link">
+          <header class="major">
             <h3>{{ item.title }}</h3>
-            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
-            <p>{{ item.role }}</p>
-          </a>
+            {% if item.client %}<p><strong>Client&nbsp;:</strong> {{ item.client }}</p>{% endif %}
+            {% if item.role %}<p>{{ item.role }}</p>{% endif %}
+          </header>
+          <a href="#audio-{{ item.slug }}" class="link primary" aria-label="Voir {{ item.title }}"></a>
         </article>
         <div id="audio-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
@@ -138,18 +153,19 @@ tile_order: 2
       <hr class="major" />
 
       <!-- TILES: Séries Tv / Tv films -->
-      <h2>Séries Tv / Tv films</h2>
+      <h2 id="audio-series">Séries TV / TV films</h2>
       <section class="tiles">
       {% for item in site.data.portfolio_audio.series %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}" alt="{{ item.title }}" />
+            <img src="{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
           </span>
-          <a href="#audio-{{ item.slug }}" class="link">
+          <header class="major">
             <h3>{{ item.title }}</h3>
-            {% if item.client %}<p><strong>Client:</strong> {{ item.client }}</p>{% endif %}
-            <p>{{ item.role }}</p>
-          </a>
+            {% if item.client %}<p><strong>Client&nbsp;:</strong> {{ item.client }}</p>{% endif %}
+            {% if item.role %}<p>{{ item.role }}</p>{% endif %}
+          </header>
+          <a href="#audio-{{ item.slug }}" class="link primary" aria-label="Voir {{ item.title }}"></a>
         </article>
         <div id="audio-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
@@ -210,7 +226,7 @@ tile_order: 2
 
       <ul class="actions">
         <li><a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="button special icon fa-download">Télécharger le CV</a></li>
-        <li><a href="mailto:contact@naxencia.fr" class="button icon fa-calendar">Proposer un projet</a></li>
+        <li><a href="mailto:{{ site.email }}" class="button icon fa-calendar">Proposer un projet</a></li>
       </ul>
     </div>
   </section>

@@ -17,11 +17,14 @@
         <div class="inner">
             <header class="major">
                 <h1>{{ page.landing-title }}</h1>
+                {% if page.landing-subtitle %}
+                <p class="banner-subtitle">{{ page.landing-subtitle }}</p>
+                {% endif %}
             </header>
             <div class="content">
                 <div class="banner-description">{{ content | markdownify }}</div>
-                <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                <ul class="actions primary-actions">
+                    <li><a href="#one" class="button next scrolly">Continuer</a></li>
                 </ul>
             </div>
         </div>
