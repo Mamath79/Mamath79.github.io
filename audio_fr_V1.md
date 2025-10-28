@@ -54,7 +54,7 @@ tile_order: 2
 
       <!-- TILES: Cinéma — Enregistrement -->
       <h2 id="audio-cinema-rec">Cinéma — Enregistrement</h2>
-      <section class="tiles">
+      <section class="tiles tiles--contain">
       {% for item in site.data.portfolio_audio.cinema_rec %}
         <article>
           <span class="image">
@@ -104,7 +104,7 @@ tile_order: 2
 
       <!-- TILES: Cinéma — Mixage -->
       <h2 id="audio-cinema-mix">Cinéma — Mixage</h2>
-      <section class="tiles">
+      <section class="tiles tiles--contain">
       {% for item in site.data.portfolio_audio.cinema_mix %}
         <article>
           <span class="image">
@@ -154,7 +154,7 @@ tile_order: 2
 
       <!-- TILES: Séries Tv / Tv films -->
       <h2 id="audio-series">Séries TV / TV films</h2>
-      <section class="tiles">
+      <section class="tiles tiles--contain">
       {% for item in site.data.portfolio_audio.series %}
         <article>
           <span class="image">

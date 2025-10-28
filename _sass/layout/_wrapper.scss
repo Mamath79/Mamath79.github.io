@@ -22,6 +22,12 @@
 			@include inner;
 		}
 
+		> #banner {
+			> .inner {
+				max-width: _size(inner) * 1.1;
+			}
+		}
+
 		@include breakpoint(small) {
 			padding-top: 2.75em;
 		}

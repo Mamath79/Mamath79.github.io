@@ -144,9 +144,11 @@
 
 		/* Fullscreen modifier for home */
 		&.full {
-			height: 95vh;
+			height: 100vh;
 			max-height: none;
-			min-height: 30em;
+			min-height: 32em;
+			margin-bottom: 0;
+			padding-bottom: 4em;
 			background-position: center;
 			background-size: cover;
 			/* Home banner overlay opacity */

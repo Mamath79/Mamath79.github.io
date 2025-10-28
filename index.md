@@ -1,8 +1,8 @@
 ---
 layout: home
 title: Accueil
-landing-title: "Développeur Concepteur Logiciel."
-landing-subtitle: "Développeur Python (Django) — back-end propre, testé et prêt à déployer."
+landing-title: "Développeur / Concepteur Logiciel & Ingénieur du son"
+landing-subtitle: ""
 description: "test description index"
 image: assets/images/banner masque 2.jpg
 author: null

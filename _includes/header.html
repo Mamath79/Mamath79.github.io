@@ -4,7 +4,10 @@
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
     {% if page.layout != "home" %}
-    <a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
+    <a href="{{ '/' | absolute_url }}" class="logo logo-home" aria-label="Retour à l’accueil">
+        <strong><span class="icon fa-home" aria-hidden="true"></span></strong>
+        <span class="sr-only">Accueil</span>
+    </a>
     {% endif %}
 
     <!-- Header contact icons -->

@@ -70,7 +70,7 @@ tile_order: 1
         </div>
       </section>
 
-      <section id="portfolio-projects" class="tiles">
+      <section id="portfolio-projects" class="tiles tiles--contain">
       {% assign items = site.data.portfolio_dev.projects %}
       {% for item in items %}
         <article>

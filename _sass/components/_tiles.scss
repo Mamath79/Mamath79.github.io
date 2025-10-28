@@ -162,6 +162,33 @@
 			}
 		}
 
+		&.tiles--contain {
+			article {
+				background-color: _palette(bg);
+				background-image: none;
+				background-size: cover;
+
+				.image {
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 0;
+					pointer-events: none;
+
+					img {
+						display: block;
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+						object-position: center;
+					}
+				}
+			}
+		}
+
 		@include breakpoint(large) {
 			article {
 				@include padding(4em, 3em);
@@ -190,12 +217,12 @@
 			}
 		}
 
-		@include breakpoint(xsmall) {
-			display: block;
+	@include breakpoint(xsmall) {
+		display: block;
 
-			article {
-				height: 20em;
-				width: 100% !important;
-			}
+		article {
+			height: 20em;
+			width: 100% !important;
 		}
+	}
 	}
