@@ -1,43 +1,8 @@
 <!-- Footer -->
 	<footer id="footer">
 		<div class="inner">
-			<ul class="icons">
-				<li>
-					<a href="mailto:{{ site.email }}" class="icon alt fa-envelope" aria-label="Email">
-						<span class="label">Email</span>
-					</a>
-				</li>
-				<li>
-					{% assign phone_href = site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' %}
-					<a href="tel:{{ phone_href }}" class="icon alt fa-phone" aria-label="Téléphone">
-						<span class="label">Phone</span>
-					</a>
-				</li>
-				{% if site.socials.LinkedIn %}
-				<li>
-					<a href="{{ site.socials.LinkedIn }}" class="icon alt fa-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
-						<span class="label">LinkedIn</span>
-					</a>
-				</li>
-				{% endif %}
-				{% if site.socials.GitHub %}
-				<li>
-					<a href="{{ site.socials.GitHub }}" class="icon alt fa-github" target="_blank" rel="noopener" aria-label="GitHub">
-						<span class="label">GitHub</span>
-					</a>
-				</li>
-				{% endif %}
-				<li>
-					<a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="icon alt fa-download" target="_blank" rel="noopener" aria-label="Télécharger le CV">
-						<span class="label">CV</span>
-					</a>
-				</li>
-			</ul>
 			<ul class="copyright">
 				<li>&copy; {{ site.title }} {{ site.subtitle }}</li>
-				<li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-				<li>Jekyll integration: <a href="https://github.com/andrewbanchich" target="_blank">Andrew Banchich</a></li>
-
 			</ul>
 		</div>
 	</footer>

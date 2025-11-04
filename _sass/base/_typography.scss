@@ -4,6 +4,8 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
+@use 'sass:color';
+
 /* Type */
 
 	body, input, select, textarea {
@@ -42,7 +44,7 @@
 		}
 
 		&:active {
-			color: desaturate(darken(_palette(highlight), 15), 5) !important;
+			color: color.adjust(_palette(highlight), $lightness: -15%, $saturation: -5%) !important;
 		}
 	}
 

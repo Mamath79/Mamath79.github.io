@@ -22,20 +22,20 @@ tile_order: 1
         <div class="6u 12u$(medium)">
           <h3>Compétences techniques</h3>
           <ul>
-            <li>Python, SQL, Django / Django REST Framework</li>
-            <li>Architecture MVC, POO, design patterns</li>
-            <li>Tests unitaires & intégration (pytest, coverage >80%)</li>
-            <li>CI/CD avec GitHub Actions & Docker</li>
-            <li>Bases de données relationnelles (MySQL, SQLite)</li>
+            <li>Python, SQL, Django / Django REST Framework — APIs sécurisées et maintenables.</li>
+            <li>Architecture MVC, POO, design patterns — bases solides pour faire évoluer vos produits.</li>
+            <li>Tests unitaires & intégration (pytest, coverage &gt;80%) — code validé en continu.</li>
+            <li>CI/CD avec GitHub Actions & Docker — livraisons fluides et maîtrisées.</li>
+            <li>Bases de données relationnelles (MySQL, SQLite) — schémas optimisés et requêtes performantes.</li>
           </ul>
         </div>
         <div class="6u$ 12u$(medium)">
           <h3>Outils & Workflow</h3>
           <ul>
-            <li>Git/GitHub, GitHub Pages, Render</li>
-            <li>VS Code, MySQL Workbench, Docker</li>
-            <li>Sphinx / Read the Docs (documentation)</li>
-            <li>Agile / Scrum (trello, user stories)</li>
+            <li>Git/GitHub, GitHub Pages, Render — suivi clair des versions et déploiements.</li>
+            <li>VS Code, MySQL Workbench, Docker — environnement outillé pour prototyper vite.</li>
+            <li>Sphinx / Read the Docs — documentation vivante et accessible.</li>
+            <li>Agile / Scrum (Trello, user stories) — progression itérative, visibilité à chaque étape.</li>
           </ul>
         </div>
       </div>
@@ -46,31 +46,32 @@ tile_order: 1
           <div class="6u 12u$(medium)">
             <div class="box service-card">
               <h3>API & back-ends Django</h3>
-              <p>Conception, tests et documentation d’APIs REST sécurisées (JWT, permissions, throttling) prêtes à être déployées.</p>
+              <p>Conception d’architectures REST sécurisées et documentées, déploiement automatisé avec Docker et Render.<br>Objectif&nbsp;: des services fiables, scalables et maintenables dans le temps.</p>
             </div>
           </div>
           <div class="6u$ 12u$(medium)">
             <div class="box service-card">
               <h3>Automatisation Python</h3>
-              <p>Scripts CLI et tâches planifiées pour orchestrer vos workflows (ETL, reporting, synchronisations, monitoring).</p>
+              <p>Scripts et outils internes pour orchestrer vos flux, simplifier vos tâches récurrentes et gagner du temps.</p>
             </div>
           </div>
           <div class="6u 12u$(medium)">
             <div class="box service-card">
               <h3>CI/CD & déploiement</h3>
-              <p>Pipeline GitHub Actions, conteneurisation Docker, livraison sur Render/VPS avec observabilité et alertes.</p>
+              <p>Pipelines GitHub Actions, intégration continue, livraison contrôlée.<br>Chaque projet est testé et validé avant mise en production.</p>
             </div>
           </div>
           <div class="6u$ 12u$(medium)">
             <div class="box service-card">
               <h3>Dashboards & data</h3>
-              <p>Dashboards Streamlit ou front léger pour piloter vos indicateurs, connexion BDD et visualisations prêtes à l’emploi.</p>
+              <p>Tableaux de bord interactifs pour piloter vos données (analyses, reporting, visualisations).</p>
             </div>
           </div>
         </div>
       </section>
 
       <section id="portfolio-projects" class="tiles tiles--contain">
+      <p>Voici une sélection de projets illustrant ma progression technique et mon approche orientée qualité logicielle.</p>
       {% assign items = site.data.portfolio_dev.projects %}
       {% for item in items %}
         <article>

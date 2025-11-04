@@ -9,6 +9,6 @@ author: null
 show_tile: false
 ---
 
-Développeur Python, je capitalise sur 20 ans d'expérience en ingénierie du son (cinéma, télévision, médias) pour livrer des solutions robustes et documentées.
-Ma formation intensive en 2024 m’a donné une maîtrise opérationnelle de Django, Flask, des APIs REST, de l’intégration continue et du déploiement Docker/Render.
-Je suis prêt à sécuriser vos projets back-end et à accélérer vos automatisations critiques.
+Développeur Python, je conçois des outils fiables et élégants pour simplifier le quotidien des équipes techniques et créatives.
+Après 20 ans en ingénierie du son (cinéma, télévision, médias), j’applique la même rigueur et sens du détail à la conception logicielle.
+Formé à Django, Flask et aux pipelines CI/CD modernes, je développe des back-ends robustes, testés et documentés, prêts à déployer sur Docker/Render.

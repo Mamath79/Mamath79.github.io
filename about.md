@@ -16,17 +16,16 @@ tile_order: 3
       </header>
 
       <p>
-        Ingénieur du son et développeur Python, j’aime autant façonner des ambiances sonores
-        que concevoir des applications robustes. Curieux et pragmatique, j’alterne entre
-        création et technique selon les projets.
+        Ingénieur du son et développeur Python, je cultive une même exigence&nbsp;: transformer la complexité en outils simples, performants et élégants.
+        Qu’il s’agisse de mixage audio ou d’automatisation logicielle, j’aime créer des solutions concrètes qui améliorent le quotidien.
       </p>
 
       <h2>Ce que je propose</h2>
       <ul>
-        <li>Automatisations Python pour studios, PME et équipes hybrides.</li>
-        <li>APIs et back-ends Django/DRF, sécurisés et couverts par des tests.</li>
-        <li>Pipelines CI/CD (GitHub Actions, Docker) prêts à déployer.</li>
-        <li>Dashboards de suivi (Streamlit, data viz) pour piloter l’activité.</li>
+        <li>Automatisation Python sur mesure pour studios, PME et équipes hybrides.</li>
+        <li>APIs et outils back-end robustes et documentés.</li>
+        <li>CI/CD et déploiement Docker/Render pour applications modernes.</li>
+        <li>Dashboards interactifs pour le suivi d’activité ou la visualisation de données.</li>
       </ul>
 
       <hr class="major" />
