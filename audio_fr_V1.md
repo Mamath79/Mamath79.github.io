@@ -1,5 +1,7 @@
 ---
 layout: page
+lang: fr
+translation_key: audio
 title: Portfolio Ingénieur du son.
 description: Enregistrement, Montage & Mixage. Doublage, Post-production audiovisuelle. 20 ans d’expérience.
 image: assets/images/DSC00243-small-34.jpg
@@ -57,7 +59,7 @@ tile_order: 2
       {% for item in site.data.portfolio_audio.cinema_rec %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
+            <img src="{{ item.image | default: '/assets/images/pic01.jpg' | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
           </span>
           <header class="major">
             <h3>{{ item.title }}</h3>
@@ -68,7 +70,7 @@ tile_order: 2
         </article>
         <div id="audio-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
-          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic01.jpg') | relative_url }}');">
+          <div class="modal-content" style="background-image: url('{{ item.image | default: '/assets/images/pic01.jpg' | relative_url }}');">
             <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
             <div class="shade"></div>
             <div class="modal-body">
@@ -107,7 +109,7 @@ tile_order: 2
       {% for item in site.data.portfolio_audio.cinema_mix %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
+            <img src="{{ item.image | default: '/assets/images/pic03.jpg' | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
           </span>
           <header class="major">
             <h3>{{ item.title }}</h3>
@@ -118,7 +120,7 @@ tile_order: 2
         </article>
         <div id="audio-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
-          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic03.jpg') | relative_url }}');">
+          <div class="modal-content" style="background-image: url('{{ item.image | default: '/assets/images/pic03.jpg' | relative_url }}');">
             <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
             <div class="shade"></div>
             <div class="modal-body">
@@ -157,7 +159,7 @@ tile_order: 2
       {% for item in site.data.portfolio_audio.series %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
+            <img src="{{ item.image | default: '/assets/images/pic05.jpg' | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet audio' }}" loading="lazy" decoding="async" />
           </span>
           <header class="major">
             <h3>{{ item.title }}</h3>
@@ -168,7 +170,7 @@ tile_order: 2
         </article>
         <div id="audio-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
-          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic05.jpg') | relative_url }}');">
+          <div class="modal-content" style="background-image: url('{{ item.image | default: '/assets/images/pic05.jpg' | relative_url }}');">
             <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
             <div class="shade"></div>
             <div class="modal-body">

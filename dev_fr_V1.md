@@ -1,5 +1,7 @@
 ---
 layout: page
+lang: fr
+translation_key: dev
 title: Portfolio Développeur
 description: Après 20 ans d’expérience en ingénierie du son, je me suis reconverti avec succès vers le développement logiciel. Diplômé de la formation Développeur d’application Python (niveau 6 RNCP) chez OpenClassrooms, j’ai acquis une solide expertise en Python, Django, SQL et bonnes pratiques logicielles. Mon approche combine rigueur technique et créativité, avec un accent fort sur la qualité du code, les tests et l’architecture logicielle.
 image: assets/images/design_dev_1.jpg
@@ -76,7 +78,7 @@ tile_order: 1
       {% for item in items %}
         <article>
           <span class="image">
-            <img src="{{ (item.image | default: '/assets/images/pic09.jpg') | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet développeur Python' }}" loading="lazy" decoding="async">
+            <img src="{{ item.image | default: '/assets/images/pic09.jpg' | relative_url }}" alt="{{ item.title }} — {{ item.role | default: 'Projet développeur Python' }}" loading="lazy" decoding="async">
           </span>
           <header class="major">
             <h3>{{ item.title }}</h3>
@@ -85,7 +87,7 @@ tile_order: 1
         </article>
         <div id="dev-{{ item.slug }}" class="modal">
           <a href="#close" class="modal-overlay" aria-label="Fermer"></a>
-          <div class="modal-content" style="background-image: url('{{ (item.image | default: '/assets/images/pic09.jpg') | relative_url }}');">
+          <div class="modal-content" style="background-image: url('{{ item.image | default: '/assets/images/pic09.jpg' | relative_url }}');">
             <a href="#close" class="modal-close" aria-label="Fermer">&times;</a>
             <div class="shade"></div>
             <div class="modal-body">

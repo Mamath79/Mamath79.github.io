@@ -21,6 +21,7 @@ country: France
 phone: (+33) 611223344
 og_image: /assets/images/banner laptop mirror 1.jpg
 twitter_username:
+lang: fr
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"

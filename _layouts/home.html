@@ -4,11 +4,18 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="{{ page.lang | default: site.lang | default: 'fr' }}">
 
 {% include head.html %}
 
 <body>
+
+    {% assign current_lang = page.lang | default: site.lang | default: 'fr' %}
+    {% if current_lang == 'en' %}
+      {% assign continue_label = 'Continue' %}
+    {% else %}
+      {% assign continue_label = 'Continuer' %}
+    {% endif %}
 
     {% include header.html %}
 
@@ -24,7 +31,7 @@
             <div class="content">
                 <div class="banner-description">{{ content | markdownify }}</div>
                 <ul class="actions primary-actions">
-                    <li><a href="#one" class="button next scrolly">Continuer</a></li>
+                    <li><a href="#one" class="button next scrolly">{{ continue_label }}</a></li>
                 </ul>
             </div>
         </div>

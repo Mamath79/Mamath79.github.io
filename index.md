@@ -1,5 +1,7 @@
 ---
 layout: home
+lang: fr
+translation_key: home
 title: Accueil
 landing-title: "Développeur / Concepteur Logiciel & Ingénieur du son"
 landing-subtitle: ""

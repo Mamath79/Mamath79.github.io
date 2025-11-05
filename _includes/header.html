@@ -3,10 +3,33 @@
 
 <!-- Header -->
 <header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
+    {% assign current_lang = page.lang | default: site.lang | default: 'fr' %}
+    {% assign supported_langs = 'fr|en' | split: '|' %}
+    {% if current_lang == 'en' %}
+      {% assign home_aria = 'Back to home' %}
+      {% assign home_label = 'Home' %}
+      {% assign header_phone_label = 'Phone' %}
+      {% assign cv_aria = 'Download résumé (FR)' %}
+      {% assign nav_home_label = 'Home' %}
+      {% assign lang_label_current = 'English' %}
+      {% assign lang_toggle_label = 'Change language' %}
+      {% assign lang_menu_label = 'Language selection' %}
+      {% assign nav_menu_label = 'Menu' %}
+    {% else %}
+      {% assign home_aria = 'Retour à l’accueil' %}
+      {% assign home_label = 'Accueil' %}
+      {% assign header_phone_label = 'Téléphone' %}
+      {% assign cv_aria = 'Télécharger le CV' %}
+      {% assign nav_home_label = 'Accueil' %}
+      {% assign lang_label_current = 'Français' %}
+      {% assign lang_toggle_label = 'Changer de langue' %}
+      {% assign lang_menu_label = 'Sélection de la langue' %}
+      {% assign nav_menu_label = 'Menu' %}
+    {% endif %}
     {% if page.layout != "home" %}
-    <a href="{{ '/' | absolute_url }}" class="logo logo-home" aria-label="Retour à l’accueil">
+    <a href="{{ '/' | absolute_url }}" class="logo logo-home" aria-label="{{ home_aria }}">
         <strong><span class="icon fa-home" aria-hidden="true"></span></strong>
-        <span class="sr-only">Accueil</span>
+        <span class="sr-only">{{ home_label }}</span>
     </a>
     {% endif %}
 
@@ -19,7 +42,7 @@
         </li>
         <li>
             {% assign phone_href = site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' %}
-            <a href="tel:{{ phone_href }}" class="icon alt fa-phone" aria-label="Téléphone">
+            <a href="tel:{{ phone_href }}" class="icon alt fa-phone" aria-label="{{ header_phone_label }}">
                 <span class="label">Phone</span>
             </a>
         </li>
@@ -38,14 +61,56 @@
         </li>
         {% endif %}
         <li>
-            <a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="icon alt fa-download" target="_blank" rel="noopener" aria-label="Télécharger le CV">
+            <a href="{{ '/assets/cv/CV-2025-FR-V6_compressed.pdf' | relative_url }}" class="icon alt fa-download" target="_blank" rel="noopener" aria-label="{{ cv_aria }}">
                 <span class="label">CV</span>
             </a>
         </li>
     </ul>
 
     <nav>
-        <a href="#menu">Menu</a>
+        <details class="lang-switcher">
+          <summary class="lang-switcher__toggle" role="button" aria-haspopup="listbox" aria-label="{{ lang_toggle_label }}">
+            <span class="lang-flag lang-flag--{{ current_lang }}" aria-hidden="true"></span>
+            <span class="lang-label">{{ lang_label_current }}</span>
+            <span class="lang-caret" aria-hidden="true"></span>
+          </summary>
+          <ul class="lang-switcher__menu" aria-label="{{ lang_menu_label }}">
+            {% for lang_option in supported_langs %}
+              {% assign option_page = nil %}
+              {% if page.translation_key %}
+                {% assign option_matches = site.html_pages | where: 'translation_key', page.translation_key %}
+                {% assign option_page = option_matches | where: 'lang', lang_option | first %}
+              {% endif %}
+              {% if option_page %}
+                {% assign option_url = option_page.url | relative_url %}
+              {% elsif lang_option == 'en' %}
+                {% assign option_url = '/en/' | relative_url %}
+              {% else %}
+                {% assign option_url = '/' | relative_url %}
+              {% endif %}
+              {% case lang_option %}
+                {% when 'en' %}
+                  {% assign option_label = 'English' %}
+                {% when 'fr' %}
+                  {% assign option_label = 'Français' %}
+                {% else %}
+                  {% assign option_label = lang_option %}
+              {% endcase %}
+              <li class="lang-switcher__item{% if lang_option == current_lang %} is-active{% endif %}">
+                <a href="{{ option_url }}"{% if lang_option == current_lang %} aria-current="true"{% endif %}>
+                  <span class="lang-option">
+                    <span class="lang-flag lang-flag--{{ lang_option }}" aria-hidden="true"></span>
+                    <span class="lang-name">{{ option_label }}</span>
+                    {% if lang_option == current_lang %}
+                    <span class="lang-active" aria-hidden="true">&#10003;</span>
+                    {% endif %}
+                  </span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+        <a href="#menu">{{ nav_menu_label }}</a>
     </nav>
 </header>
 
@@ -53,35 +118,41 @@
 <nav id="menu">
 	<ul class="links">
 		{%- assign current_url = page.url | absolute_url -%}
+		{%- assign pages_in_lang = site.html_pages | where: 'lang', current_lang -%}
+    {%- if current_lang == 'fr' -%}
+      {%- assign langless_pages = site.html_pages | where_exp: 'item', 'item.lang == nil' -%}
+      {%- assign pages_in_lang = pages_in_lang | concat: langless_pages -%}
+    {%- endif -%}
+		{%- assign nav_pages = pages_in_lang | where: 'nav-menu', true -%}
+		{%- assign ordered_keys = 'dev|about|audio' | split: '|' -%}
 
-		{%- comment -%}
-		  Ordered primary pages: Dev portfolio, About, Audio history
-		{%- endcomment -%}
-		{%- assign ordered_paths = 'dev_fr_V1.md|about.md|audio_fr_V1.md' | split: '|' -%}
-		{%- for op in ordered_paths -%}
-		  {%- assign hit = site.html_pages | where: 'path', op | first -%}
-		  {%- if hit and hit.nav-menu == true -%}
+		{%- if page.layout != 'home' -%}
+		  {%- assign home_page = pages_in_lang | where: 'translation_key', 'home' | first -%}
+		  {%- if home_page -%}
+		    {%- assign home_url = home_page.url | absolute_url -%}
+		    {%- if home_url != current_url -%}
+		      <li><a href="{{ home_page.url | relative_url }}">{{ nav_home_label }}</a></li>
+		    {%- endif -%}
+		  {%- endif -%}
+		{%- endif -%}
+
+		{%- for key in ordered_keys -%}
+		  {%- assign hit = nav_pages | where: 'translation_key', key | first -%}
+		  {%- if hit -%}
 		    {%- assign hit_url = hit.url | absolute_url -%}
 		    {%- if hit_url != current_url -%}
-		      <li><a href="{{ hit_url }}">{{ hit.title }}</a></li>
+		      <li><a href="{{ hit.url | relative_url }}">{{ hit.nav_title | default: hit.title }}</a></li>
 		    {%- endif -%}
 		  {%- endif -%}
 		{%- endfor -%}
 
-		{%- comment -%}
-		  Add remaining nav-menu pages except Home and All posts, excluding already listed
-		{%- endcomment -%}
-		{%- for p in site.html_pages -%}
+		{%- for p in nav_pages -%}
 		  {%- assign p_url = p.url | absolute_url -%}
-		  {%- if p.layout == 'home' -%}
-		    {%- if page.layout != 'home' -%}
-      <li><a href="{{ "" | absolute_url }}/">Accueil</a></li>
+		  {%- unless ordered_keys contains p.translation_key -%}
+		    {%- if p_url != current_url and p.layout != 'allposts' -%}
+		      <li><a href="{{ p.url | relative_url }}">{{ p.nav_title | default: p.title }}</a></li>
 		    {%- endif -%}
-		  {%- elsif p.nav-menu == true and p_url != current_url and p.layout != 'allposts' and p.title != 'All posts' -%}
-		    {%- unless ordered_paths contains p.path -%}
-		      <li><a href="{{ p_url }}">{{ p.title }}</a></li>
-		    {%- endunless -%}
-		  {%- endif -%}
+		  {%- endunless -%}
 		{%- endfor -%}
 	</ul>
 </nav>

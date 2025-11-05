@@ -1,5 +1,7 @@
 ---
 layout: allposts
+lang: en
+translation_key: posts
 title: All posts
 landing-title: 'All posts'
 nav-menu: true

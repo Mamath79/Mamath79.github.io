@@ -1,5 +1,7 @@
 ---
 layout: page
+lang: fr
+translation_key: about
 title: À propos de moi
 description: Bio, musique, sport et passions.
 image: assets/images/banner_hobbies_1.jpg

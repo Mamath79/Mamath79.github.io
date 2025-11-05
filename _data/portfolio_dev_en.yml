@@ -1,0 +1,66 @@
+projects:
+  - title: "Orange County Lettings"
+    slug: orange-county-lettings
+    role: "Django developer"
+    client: "OpenClassrooms training project"
+    stack: ["Python", "Django", "Docker", "GitHub Actions", "Render"]
+    link: "https://python-oc-lettings-8d61.onrender.com/"
+    repo: "https://github.com/Mamath79/oc-lettings-modular-django.git"
+    image: "assets/images/portfolio/P13_orange_counting_Lettings.jpg"
+    category: "web"
+    blurb: "Modular refactor, Sentry monitoring, and continuous deployment on Render."
+    result: "Docker-based CI/CD pipeline plus automated tests (coverage >85%)."
+
+  - title: "SoftDesk Support API"
+    slug: softdesk-support-api
+    role: "Back-end API developer"
+    client: "OpenClassrooms training project"
+    stack: ["Python", "Django REST Framework", "JWT", "Docker", "CI/CD"]
+    repo: "https://github.com/Mamath79/oc-softdesk-support-api.git"
+    image: "assets/images/portfolio/soft_desk.jpg"
+    category: "api"
+    blurb: "REST API for multi-project ticketing with granular permissions."
+    result: "JWT authentication and integration tests (coverage >80%)."
+
+  - title: "EpicEvents CRM (CLI)"
+    slug: epicevents-crm-cli
+    role: "Python CLI developer"
+    client: "OpenClassrooms training project"
+    stack: ["Python", "MySQL", "SQLAlchemy", "Click", "Rich", "pytest"]
+    repo: "https://github.com/Mamath79/epic-events-secure-backend.git"
+    image: "/assets/images/portfolio/crm-cli.jpg"
+    category: "cli"
+    blurb: "Client, contract, and event management through a secure command-line workflow."
+    result: "Role auditing plus unit tests (coverage >90%)."
+
+  - title: "LITRevu"
+    slug: litrevu
+    role: "Full-stack Django developer"
+    client: "Personal project"
+    stack: ["Python", "Django", "Auth", "pytest"]
+    repo: "https://github.com/Mamath79/OC_P9_D-veloppez-une-application-Web-en-utilisant-Django.git"
+    image: "/assets/images/portfolio/litrevu.jpg"
+    category: "web"
+    blurb: "Peer-review platform with a structured moderation workflow."
+    result: "84% test coverage plus custom admin tooling."
+
+  - title: "Chess Tournament"
+    slug: chess-tournament
+    role: "Python MVC developer"
+    client: "OpenClassrooms training project"
+    stack: ["Python", "TinyDB", "PrettyTable", "MVC"]
+    repo: "https://github.com/Mamath79/Chess_Tournament"
+    image: "/assets/images/portfolio/chess.jpg"
+    category: "cli"
+    blurb: "Swiss-system tournament orchestration with on-demand PDF reports."
+    result: "Tested MVC architecture with reliable local persistence."
+
+  - title: "Intermitracker (in progress)"
+    slug: intermitracker
+    role: "Django SaaS developer"
+    client: "Personal project"
+    stack: ["Python", "Django", "Google Calendar", "SaaS"]
+    image: "/assets/images/portfolio/intermitracker.jpg"
+    category: "web"
+    blurb: "Timesheet and revenue tracking for entertainment freelancers with calendar sync."
+    result: "MVP underway – next steps: user onboarding and accounting exports."
