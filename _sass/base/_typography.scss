@@ -4,7 +4,6 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
-@use 'sass:color';
 
 /* Type */
 
@@ -44,7 +43,7 @@
 		}
 
 		&:active {
-			color: color.adjust(_palette(highlight), $lightness: -15%, $saturation: -5%) !important;
+			color: adjust-color(_palette(highlight), $lightness: -15%, $saturation: -5%) !important;
 		}
 	}
 
