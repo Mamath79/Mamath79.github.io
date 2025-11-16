@@ -18,8 +18,11 @@ tile_order: 3
       </header>
 
       <p>
-        Ingénieur du son et développeur Python, je cultive une même exigence&nbsp;: transformer la complexité en outils simples, performants et élégants.
-        Qu’il s’agisse de mixage audio ou d’automatisation logicielle, j’aime créer des solutions concrètes qui améliorent le quotidien.
+        Développeur back-end Python, je transforme les besoins métier en outils simples, performants et documentés.
+        Ma spécialité&nbsp;: des APIs Django/DRF testées, des automatisations fiables et des pipelines CI/CD qui fluidifient les livraisons.
+      </p>
+      <p>
+        Mon parcours atypique d’ingénieur du son m’a appris à écouter, cadrer et livrer avec précision. Aujourd’hui, cette culture craft nourrit chaque sprint.
       </p>
 
       <h2>Ce que je propose</h2>
@@ -29,6 +32,21 @@ tile_order: 3
         <li>CI/CD et déploiement Docker/Render pour applications modernes.</li>
         <li>Dashboards interactifs pour le suivi d’activité ou la visualisation de données.</li>
       </ul>
+
+      <hr class="major" />
+
+      <h2>Story ingé son</h2>
+      <p>
+        Pendant vingt ans, j’ai accompagné des productions ciné et télé côté doublage, prises de voix et mixage final.
+        Studios comme Dubbing Brothers, Iyuno ou TitraFilm m’ont appris la rigueur, la coordination d’équipes pluridisciplinaires et le respect des délais serrés.
+      </p>
+      <p>
+        À force d’optimiser mes propres workflows audio, j’ai commencé à coder des scripts, puis des outils complets pour automatiser les livrables.
+        Cette curiosité m’a naturellement mené vers une reconversion en développement logiciel.
+      </p>
+      <p>
+        Aujourd’hui, je ne propose plus de prestations audio, mais je capitalise sur cette histoire pour livrer des services tech orientés terrain&nbsp;: écoute active, adaptation rapide et documentation soignée.
+      </p>
 
       <hr class="major" />
 

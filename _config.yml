@@ -3,13 +3,12 @@ title: Mathieu Vieillefont
 subtitle: Développeur Python
 email: mathieu.vieillefont@naxencia.com
 description: |
-  Développeur Python, je capitalise sur 20 ans d'expérience en ingénierie du son (cinéma, télévision, médias)
-  pour apporter rigueur, expertise technique et orientation client à mes projets.
-  Ma formation intensive en 2024 m'a permis d’acquérir une solide maîtrise de Python, Django, Flask, des API
-  REST, de l’automatisation et des pipelines CI/CD. Motivé par l’innovation et l’apprentissage continu, je
-  recherche une opportunité pour mettre à profit mes compétences hybrides au sein d'une équipe dynamique et
-  relever des défis techniques stimulants.
-  Prêt à contribuer concrètement à vos projets, je suis disponible pour un test sur mission.
+  Développeur back-end Python, je conçois des APIs Django/DRF, des automatisations et des pipelines CI/CD
+  qui sécurisent les mises en production. Ancien ingénieur du son (cinéma, télévision, médias), je mets
+  désormais cette exigence de craft au service du logiciel : code testé, documentation accessible et sens
+  aigu de la relation client.
+  Diplômé Développeur d’application Python (OpenClassrooms, 2024), je suis prêt à renforcer une équipe tech
+  sur des projets à impact et à itérer vite grâce à GitHub Actions, Docker et une communication claire.
 baseurl:  # the subpath of your site, e.g. /blog
 url: "https://mamath79.github.io" # the base hostname & protocol for your site
 author: "Mathieu Vieillefont"

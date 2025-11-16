@@ -22,6 +22,10 @@
 	{% if og_image %}<meta name="twitter:image" content="{{ og_image | absolute_url }}" />{% endif %}
 	{% if site.twitter_username %}<meta name="twitter:site" content="@{{ site.twitter_username }}" />{% endif %}
 	<!--[if lte IE 8]><script src="{{ "assets/js/ie/html5shiv.js" | relative_url }}"></script><![endif]-->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon-180.png' | relative_url }}" />
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}" />
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/images/favicon-96.png' | relative_url }}" />
+	<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}" />
 	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="{{ "assets/css/ie9.css" | relative_url }}" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="{{ "assets/css/ie8.css" | relative_url }}" /><![endif]-->

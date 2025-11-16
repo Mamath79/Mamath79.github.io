@@ -124,7 +124,7 @@
       {%- assign pages_in_lang = pages_in_lang | concat: langless_pages -%}
     {%- endif -%}
 		{%- assign nav_pages = pages_in_lang | where: 'nav-menu', true -%}
-		{%- assign ordered_keys = 'dev|about|audio' | split: '|' -%}
+		{%- assign ordered_keys = 'dev|about' | split: '|' -%}
 
 		{%- if page.layout != 'home' -%}
 		  {%- assign home_page = pages_in_lang | where: 'translation_key', 'home' | first -%}

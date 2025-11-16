@@ -68,7 +68,18 @@
   font-weight: 600;
 }
 
-.modal .actions { margin-top: 1rem; }
+.modal .actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+}
+
+.modal .actions .button {
+  margin: 0;
+  min-width: 11rem;
+}
 
 .modal .modal-close {
   position: absolute;

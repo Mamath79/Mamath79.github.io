@@ -3,14 +3,14 @@ layout: home
 lang: en
 translation_key: home
 title: Home
-landing-title: "Software Developer & Sound Engineer"
-landing-subtitle: ""
-description: "Python developer with a sound engineering background, crafting reliable tools and back-end services."
+landing-title: "Software Engineer"
+landing-subtitle: "Python back ends · Django · CI/CD"
+description: "Python back-end developer specialised in APIs, automation, and CI/CD pipelines."
 image: assets/images/banner masque 2.jpg
 show_tile: false
 permalink: /en/
 ---
 
-I build dependable Python solutions that make technical and creative teams more effective.
-After 20 years in sound engineering (film, television, media), I bring the same rigor and attention to detail to software design.
-Trained on Django, Flask, and modern CI/CD pipelines, I deliver robust back ends that are tested, documented, and ready to deploy on Docker/Render.
+I build dependable Python back ends that keep product and data teams moving fast.
+After 20 years in sound engineering, I carry the same sense of craft, empathy, and discipline into software delivery.
+I design Django/DRF architectures that are tested, documented, and ready to ship through GitHub Actions, Docker, and Render.
